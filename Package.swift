@@ -20,20 +20,41 @@ import PackageDescription
 let package = Package(
   name: "GoogleRidesharingDriver", platforms: [.iOS(.v14)],
   products: [.library(name: "GoogleRidesharingDriver", targets: ["GoogleRidesharingDriverTarget"])],
-  dependencies: [],
+  dependencies: [.package(url: "https://github.com/googlemaps/ios-navigation-sdk", from: "5.4.0")],
   targets: [
     .binaryTarget(
       name: "GoogleRidesharingDriver",
-      url: "https://dl.google.com/geosdk/swiftpm/0.0.0/GoogleRidesharingDriver_3p.xcframework.zip",
-      checksum: "f0a1c5e211f618b7abca4c9e632eea9dde44d06304d82c7b50e2182040e267c4"
+      url: "https://dl.google.com/geosdk/swiftpm/3.3.0/GoogleRidesharingDriver_3p.xcframework.zip",
+      checksum: "4ff83069d4de41b1bcd07338ce297df6acafc34f29cae13b5f59c16b9d860736"
     ),
     .target(
       name: "GoogleRidesharingDriverTarget",
-      dependencies: ["GoogleRidesharingDriver"],
+      dependencies: [
+        "GoogleRidesharingDriver",
+        .product(name: "GoogleNavigation", package: "ios-navigation-sdk"),
+      ],
       path: "Driver",
       sources: ["GMTDEmpty.m"],
       resources: [.copy("Resources/GoogleRidesharingDriver/GoogleRidesharingDriver.bundle")],
-      publicHeadersPath: "Sources"
+      publicHeadersPath: "Sources",
+      linkerSettings: [
+        .linkedLibrary("c++"),
+        .linkedLibrary("z"),
+        .linkedFramework("Accelerate"),
+        .linkedFramework("AVFoundation"),
+        .linkedFramework("AudioToolbox"),
+        .linkedFramework("CoreData"),
+        .linkedFramework("CoreGraphics"),
+        .linkedFramework("CoreImage"),
+        .linkedFramework("CoreLocation"),
+        .linkedFramework("CoreText"),
+        .linkedFramework("GLKit"),
+        .linkedFramework("ImageIO"),
+        .linkedFramework("OpenGLES"),
+        .linkedFramework("QuartzCore"),
+        .linkedFramework("SystemConfiguration"),
+        .linkedFramework("LocalAuthentication"),
+      ]
     ),
   ]
 )

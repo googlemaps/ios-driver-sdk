@@ -6,7 +6,7 @@ This repository contains the Swift package for the
 [Driver SDK for iOS](https://developers.google.com/maps/documentation/transportation-logistics/on-demand-rides-deliveries-solution/trip-order-progress/driver-sdk/driver_sdk_quickstart_ios).
 For additional methods of installing the Driver SDK for iOS including
 CocoaPods, see the Driver SDK for iOS
-[documentation](tps://developers.google.com/maps/documentation/transportation-logistics/on-demand-rides-deliveries-solution/trip-order-progress/driver-sdk/driver_sdk_quickstart_ios).
+[documentation](https://developers.google.com/maps/documentation/transportation-logistics/on-demand-rides-deliveries-solution/trip-order-progress/driver-sdk/driver_sdk_quickstart_ios).
 
 ## Requirements
 
@@ -14,10 +14,7 @@ CocoaPods, see the Driver SDK for iOS
 -   An app targeting iOS 14 or later
 -   A Google Maps Platform
     [project](https://developers.google.com/maps/documentation/navigation/ios-sdk/config)
-    with the Navigation SDK for iOS enabled.
--   An
-    [API key](https://developers.google.com/maps/documentation/ios-sdk/get-api-key)
-    associated with the project above.
+    with the Driver SDK for iOS enabled.
 
 ## Installation
 
@@ -36,8 +33,8 @@ CocoaPods, see the Driver SDK for iOS
     and using the "Exact Version" option.
 
 4.  Follow the
-    [instructions](https://developers.google.com/maps/documentation/navigation/ios-sdk/config#add-an-api-key-to-your-project)
-    to add your API key to your app.
+    [instructions](https://developers.google.com/maps/documentation/transportation-logistics/on-demand-rides-deliveries-solution/trip-order-progress/driver-sdk/driver_sdk_quickstart_ios#implement_authorization_and_authentication)
+    to authorize and authenticate requests from your app.
 
 ## Sample App
 
@@ -75,10 +72,10 @@ Maps Platform Terms of Service).
 This repositiory adheres to [semantic versioning](https://semver.org/) to
 indicate when backwards-incompatible changes are introduced.
 
--   For issues with the Navigation SDK for iOS, please
-    [open a support case](https://developers.google.com/maps/documentation/navigation/ios-sdk/support).
+-   For issues with the Driver SDK for iOS, please
+    [open a support case](https://developers.google.com/maps/documentation/transportation-logistics/on-demand-rides-deliveries-solution/support/support#contact-maps-support).
 -   If you find a bug with the Swift package, please
-    [file an issue](https://github.com/googlemaps/ios-navigation-sdk/issues) on
+    [file an issue](https://github.com/googlemaps/ios-driver-sdk/issues) on
     GitHub.
 
 If you would like to get answers to technical questions from other Google Maps
