@@ -25,7 +25,7 @@ let package = Package(
     .binaryTarget(
       name: "GoogleRidesharingDriver",
       url: "https://dl.google.com/geosdk/swiftpm/3.3.0/GoogleRidesharingDriver_3p.xcframework.zip",
-      checksum: "4ff83069d4de41b1bcd07338ce297df6acafc34f29cae13b5f59c16b9d860736"
+      checksum: "c959971289c21de436e6e7c025381ddfd26e1a15598f57af0e536a1e19b9f5c9"
     ),
     .target(
       name: "GoogleRidesharingDriverTarget",
