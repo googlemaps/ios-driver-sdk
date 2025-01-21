@@ -6,7 +6,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -23,8 +23,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "GoogleRidesharingDriver",
-      url: "https://dl.google.com/geosdk/swiftpm/9.0.0/GoogleRidesharingDriver_3p.xcframework.zip",
-      checksum: "f4cf8906d155e502ee45acb415c518f935dc65a2c9b2d19ef5b361dc265d2c7f"
+      url: "https://dl.google.com/geosdk/swiftpm/9.2.0/GoogleRidesharingDriver_3p.xcframework.zip",
+      checksum: "76f421244fb47ae21367ff7608c1765ea5b1765f3afc07b2fb5bf9228b8a35f0"
     ),
     .target(
       name: "GoogleRidesharingDriverTarget",
