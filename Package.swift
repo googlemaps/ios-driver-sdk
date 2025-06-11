@@ -1,4 +1,4 @@
-// swift-tools-version: 5.5
+// swift-tools-version: 5.7
 //
 // Copyright 2024 Google LLC
 //
@@ -17,14 +17,14 @@
 import PackageDescription
 
 let package = Package(
-  name: "GoogleRidesharingDriver", platforms: [.iOS(.v15)],
+  name: "GoogleRidesharingDriver", platforms: [.iOS(.v16)],
   products: [.library(name: "GoogleRidesharingDriver", targets: ["GoogleRidesharingDriverTarget"])],
-  dependencies: [.package(url: "https://github.com/googlemaps/ios-navigation-sdk", from: "9.0.0")],
+  dependencies: [.package(url: "https://github.com/googlemaps/ios-navigation-sdk", from: "10.0.0")],
   targets: [
     .binaryTarget(
       name: "GoogleRidesharingDriver",
-      url: "https://dl.google.com/geosdk/swiftpm/9.2.1/GoogleRidesharingDriver_3p.xcframework.zip",
-      checksum: "077dbc68087a030d8b8afa063bcbb5b3bce21c63d8b3696850c35e2efbda9a51"
+      url: "https://dl.google.com/geosdk/swiftpm/10.0.0/GoogleRidesharingDriver_3p.xcframework.zip",
+      checksum: "69a87ff74fbe6f6757d445e50abf740e209014479436bf09c1acf1f8844550b8"
     ),
     .target(
       name: "GoogleRidesharingDriverTarget",
