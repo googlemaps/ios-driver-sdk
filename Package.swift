@@ -19,12 +19,15 @@ import PackageDescription
 let package = Package(
   name: "GoogleRidesharingDriver", platforms: [.iOS(.v16)],
   products: [.library(name: "GoogleRidesharingDriver", targets: ["GoogleRidesharingDriverTarget"])],
-  dependencies: [.package(url: "https://github.com/googlemaps/ios-navigation-sdk", from: "10.0.0")],
+  dependencies: [
+    .package(url: "https://github.com/googlemaps/ios-navigation-sdk", from: "10.10.0")
+  ],
   targets: [
     .binaryTarget(
       name: "GoogleRidesharingDriver",
-      url: "https://dl.google.com/geosdk/swiftpm/10.0.0/GoogleRidesharingDriver_3p.xcframework.zip",
-      checksum: "69a87ff74fbe6f6757d445e50abf740e209014479436bf09c1acf1f8844550b8"
+      url:
+        "https://dl.google.com/geosdk/swiftpm/10.10.0/GoogleRidesharingDriver_3p.xcframework.zip",
+      checksum: "336a356a5c774fdc66835d954ead1d351053adf21efb53120153740f12c2e8b9"
     ),
     .target(
       name: "GoogleRidesharingDriverTarget",
