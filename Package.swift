@@ -17,45 +17,43 @@
 import PackageDescription
 
 let package = Package(
-  name: "GoogleRidesharingDriver", platforms: [.iOS(.v16)],
-  products: [.library(name: "GoogleRidesharingDriver", targets: ["GoogleRidesharingDriverTarget"])],
-  dependencies: [
-    .package(url: "https://github.com/googlemaps/ios-navigation-sdk", from: "10.10.0")
-  ],
+  name: "GoogleRidesharingConsumer", platforms: [.iOS(.v16)],
+  products: [
+    .library(name: "GoogleRidesharingConsumer", targets: ["GoogleRidesharingConsumerTarget"])
+  ], dependencies: [.package(url: "https://github.com/googlemaps/ios-maps-sdk", from: "10.10.0")],
   targets: [
     .binaryTarget(
-      name: "GoogleRidesharingDriver",
+      name: "GoogleRidesharingConsumer",
       url:
-        "https://dl.google.com/geosdk/swiftpm/10.10.1/GoogleRidesharingDriver_3p.xcframework.zip",
-      checksum: "f67143e916a68f0e0f861ad5f5603f0fc9a0e91582bf6ba04e91e6ca980d4b72"
+        "https://dl.google.com/geosdk/swiftpm/11.1.0/GoogleRidesharingConsumer_3p.xcframework.zip",
+      checksum: "81dc4ca446738debc66de7811d643a0f11e90e43bb9f4539c703d98ec670e08c"
     ),
     .target(
-      name: "GoogleRidesharingDriverTarget",
+      name: "GoogleRidesharingConsumerTarget",
       dependencies: [
-        "GoogleRidesharingDriver",
-        .product(name: "GoogleNavigation", package: "ios-navigation-sdk"),
+        "GoogleRidesharingConsumer",
+        .product(name: "GoogleMaps", package: "ios-maps-sdk"),
       ],
-      path: "Driver",
-      sources: ["GMTDEmpty.m"],
-      resources: [.copy("Resources/GoogleRidesharingDriver/GoogleRidesharingDriver.bundle")],
+      path: "Consumer",
+      sources: ["GMTCEmpty.m"],
+      resources: [.copy("Resources/GoogleRidesharingConsumer/GoogleRidesharingConsumer.bundle")],
       publicHeadersPath: "Sources",
       linkerSettings: [
         .linkedLibrary("c++"),
         .linkedLibrary("z"),
         .linkedFramework("Accelerate"),
-        .linkedFramework("AVFoundation"),
-        .linkedFramework("AudioToolbox"),
         .linkedFramework("CoreData"),
         .linkedFramework("CoreGraphics"),
         .linkedFramework("CoreImage"),
         .linkedFramework("CoreLocation"),
+        .linkedFramework("CoreTelephony"),
         .linkedFramework("CoreText"),
         .linkedFramework("GLKit"),
         .linkedFramework("ImageIO"),
         .linkedFramework("OpenGLES"),
         .linkedFramework("QuartzCore"),
         .linkedFramework("SystemConfiguration"),
-        .linkedFramework("LocalAuthentication"),
+        .linkedFramework("UIKit"),
       ]
     ),
   ]
